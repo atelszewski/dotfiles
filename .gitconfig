@@ -1,0 +1,8 @@
+[user]
+	name = Andrzej Telszewski
+[diff]
+	colorMoved = zebra
+[pull]
+	rebase = true
+[push]
+	default = current
