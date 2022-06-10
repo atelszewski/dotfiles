@@ -1,7 +1,15 @@
 [user]
 	name = Andrzej Telszewski
+[alias]
+	create-initial-commit = commit --allow-empty -m \"Create repository (initial empty commit)\"
+[color]
+	ui = auto
+[commit]
+	template = ~/.gitmessage
 [diff]
 	colorMoved = zebra
+[init]
+	defaultBranch = main
 [pull]
 	rebase = true
 [push]
