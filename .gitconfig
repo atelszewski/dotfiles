@@ -1,6 +1,7 @@
 [user]
 	name = Andrzej Telszewski
 [alias]
+	xclean = clean -dx -e '*?.user.linux'
 	create-initial-commit = commit --allow-empty -m \"Create repository (initial empty commit)\"
 [color]
 	ui = auto
