@@ -3,6 +3,8 @@
 [alias]
 	xclean = clean -dx -e '*?.user.linux'
 	create-initial-commit = commit --allow-empty -m \"Create repository (initial empty commit)\"
+[advice]
+	addEmptyPathspec = false
 [color]
 	ui = auto
 [diff]
