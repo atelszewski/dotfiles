@@ -7,6 +7,8 @@
 	addEmptyPathspec = false
 [color]
 	ui = auto
+[core]
+	pager = ""
 [diff]
 	colorMoved = zebra
 [init]
