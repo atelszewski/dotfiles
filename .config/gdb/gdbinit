@@ -1,3 +1,5 @@
+set history save on
+
 define hook-file
     set confirm off
 end
