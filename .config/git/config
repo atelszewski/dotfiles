@@ -11,6 +11,8 @@
 	dog = log --decorate --oneline --graph
 [advice]
 	addEmptyPathspec = false
+[clean]
+	requireForce = true
 [color]
 	ui = auto
 [core]
