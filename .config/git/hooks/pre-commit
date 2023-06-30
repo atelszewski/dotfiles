@@ -1,0 +1,14 @@
+#!/bin/bash
+
+git_hook_name=pre-commit
+git_common_dir=$(git rev-parse --git-common-dir)
+git_hook_local_path=${git_common_dir}/hooks/${git_hook_name}
+
+if [[ -e ${git_hook_local_path} ]]; then
+    if [[ -x ${git_hook_local_path} ]]; then
+        ${git_hook_local_path} "${@}"
+    else
+        printf "%shint: The '%s' hook was ignored because it's not set as executable.\033[m\n" \
+            "$(git config --get-color color.advice.hint default)" "${git_hook_local_path}" 1>&2
+    fi
+fi

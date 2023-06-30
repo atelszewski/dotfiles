@@ -16,6 +16,7 @@
 [color]
 	ui = auto
 [core]
+	hooksPath = ~/.config/git/hooks
 	pager =
 [diff]
 	colorMoved = zebra
