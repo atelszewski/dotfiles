@@ -9,6 +9,6 @@ if [[ -e ${git_hook_local_path} ]]; then
         ${git_hook_local_path} "${@}"
     else
         printf "%shint: The '%s' hook was ignored because it's not set as executable.\033[m\n" \
-            "$(git config --get-color color.advice.hint default)" "${git_hook_local_path}" 1>&2
+            "$(git config --get-color color.advice.hint yellow)" "${git_hook_local_path}" 1>&2
     fi
 fi
