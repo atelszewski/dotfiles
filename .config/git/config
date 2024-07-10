@@ -2,15 +2,15 @@
 	name = Andrzej Telszewski
 [alias]
 	xblame = blame --ignore-revs-file=.git-blame-ignore-revs
-	xclean = clean -dx -e '*?.user.linux'
+	xclean = clean -dx -e '*?.user.linux' -e '*?.cflags' -e '*?.config' -e '*?.creator' -e '*?.cxxflags' -e '*?.files' -e '*?.includes'
 	xlog = log --oneline -16
 	xreflog = reflog --format='%C(yellow)%h%C(default)  %C(brightgreen)%gd%C(default)  %gs' --date=format:%Y-%m-%d -32
-	xstatus = status -sb
 	adog = log --all --decorate --oneline --graph
 	create-initial-commit = commit --allow-empty -m 'Create repository (initial empty commit)'
 	dog = log --decorate --oneline --graph
 [advice]
 	addEmptyPathspec = false
+	skippedCherryPicks = false
 [clean]
 	requireForce = true
 [color]

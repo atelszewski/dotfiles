@@ -1,3 +1,10 @@
 # Qt Creator project config files.
 
 *?.user.linux
+*?.cflags
+*?.config
+*?.creator
+*?.cxxflags
+*?.files
+*?.includes
+.qtc_clangd/
