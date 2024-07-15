@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+set -u
+
 git status -sb "${@}"
 git ls-files -t -z :/ | grep -z ^S | xargs -0 -r -L1 printf ' %s\n'
 git stash list
