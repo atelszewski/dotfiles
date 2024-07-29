@@ -2,10 +2,12 @@
 	name = Andrzej Telszewski
 [alias]
 	xblame = blame --ignore-revs-file=.git-blame-ignore-revs
-	xclean = clean -dx -e '*?.user.linux' -e '*?.cflags' -e '*?.config' -e '*?.creator' -e '*?.cxxflags' -e '*?.files' -e '*?.includes'
+	xclean = clean -dx -e '*?.user.linux' -e '*?.cflags' -e '*?.config' -e '*?.creator' -e '*?.cxxflags' -e '*?.files' -e '*?.includes' -e 'CMakeUserPresets.json'
+	xignore = update-index --skip-worktree
 	xlog = log --oneline -16
 	xreflog = reflog --format='%C(yellow)%h%C(default)  %C(brightgreen)%gd%C(default)  %gs' --date=format:%Y-%m-%d -32
-	adog = log --all --decorate --oneline --graph
+	xtrack = update-index --no-skip-worktree
+	xdog = log --decorate --oneline --graph
 	create-initial-commit = commit --allow-empty -m 'Create repository (initial empty commit)'
 	dog = log --decorate --oneline --graph
 [advice]

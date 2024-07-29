@@ -3,6 +3,8 @@
 set -e
 set -u
 
-git status -sb "${@}"
+git xlog -1
+git status -s "${@}"
+git submodule status --recursive
 git ls-files -t -z :/ | grep -z ^S | xargs -0 -r -L1 printf ' %s\n'
 git stash list

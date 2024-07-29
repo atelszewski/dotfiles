@@ -8,3 +8,5 @@
 *?.files
 *?.includes
 .qtc_clangd/
+
+CMakeUserPresets.json
