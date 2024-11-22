@@ -10,3 +10,4 @@
 .qtc_clangd/
 
 CMakeUserPresets.json
+compile_commands.json
