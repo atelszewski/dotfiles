@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+set -u
+set -o pipefail
+
+declare -a clean_args
+
+clean_args=(
+    clean -dx
+    -e '*?.user.linux'
+    -e '*?.cflags'
+    -e '*?.config'
+    -e '*?.creator'
+    -e '*?.cxxflags'
+    -e '*?.files'
+    -e '*?.includes'
+    -e CMakeLists.txt.shared
+    -e CMakeUserPresets.json
+    -e compile_commands.json
+    -e compile_commands.json.shared
+)
+
+git "${clean_args[@]}" "${@}"
+git submodule foreach --recursive git "${clean_args[@]}" "${@}"

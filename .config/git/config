@@ -2,7 +2,6 @@
 	name = Andrzej Telszewski
 [alias]
 	xblame = blame --ignore-revs-file=.git-blame-ignore-revs
-	xclean = clean -dx -e '*?.user.linux' -e '*?.cflags' -e '*?.config' -e '*?.creator' -e '*?.cxxflags' -e '*?.files' -e '*?.includes' -e 'CMakeUserPresets.json' -e compile_commands.json
 	xignore = update-index --skip-worktree
 	xlog = log --oneline -16
 	xreflog = reflog --format='%C(yellow)%h%C(default)  %C(brightgreen)%gd%C(default)  %gs' --date=format:%Y-%m-%d -32
@@ -27,6 +26,8 @@
 	recurseSubmodules = no
 [init]
 	defaultBranch = main
+[merge]
+	conflictStyle = zdiff3
 [pull]
 	rebase = true
 [push]

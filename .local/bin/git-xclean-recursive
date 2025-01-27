@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -e
-set -u
-set -o pipefail
-
-git xclean "${@}"
-git submodule foreach --recursive git xclean "${@}"
